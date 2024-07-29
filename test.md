@@ -59,8 +59,8 @@ This module consists of three classes
 This is a utility class, all the methods declared in this class are static. These methods are bound to the class and not the object of the class.
 Methods declared in the class:
 - ##### [sort_dict](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L15)
-    Sorting a Python dictionary based on the keys.  
-    **Input:** Python dictionary
+    Sorting a Python dictionary based on the keys.   
+    **Input:** Python dictionary  
     **Returns:** Sorted Python dictionary based on key
 - ##### [check_if_file_exists](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L20)
     Check whether a file exists in the mentioned path.  
