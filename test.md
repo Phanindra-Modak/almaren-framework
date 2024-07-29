@@ -59,122 +59,123 @@ This module consists of three classes
 This is a utility class, all the methods declared in this class are static. These methods are bound to the class and not the object of the class.
 Methods declared in the class:
 - ##### [sort_dict](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L15)
-    Sorting a Python dictionary based on the keys.   
+    Sorting a Python dictionary based on the keys.  
     **Input:** Python dictionary  
-    **Returns:** Sorted Python dictionary based on key
+    **Returns:** Sorted Python dictionary based on key  
 - ##### [check_if_file_exists](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L20)
-    Check whether a file exists in the mentioned path.  
-    **Input:** File Path
-    **Returns:** AssertException if the file is not present
+    Check whether a file exists in the mentioned path.   
+    **Input:** File Path  
+    **Returns:** AssertException if the file is not present  
 - ##### [load_yaml_file](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L24)
-    Fetches the yaml file in the mentioned path and return its content in the form of JSON using pyyaml library
-    **Input:** yaml file path
-    **Returns:** JSON variable
+    Fetches the yaml file in the mentioned path and return its content in the form of JSON using pyyaml library  
+    **Input:** yaml file path  
+    **Returns:** JSON variable  
 - ##### [list_contract_yamls](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L30)
-    List the yaml files present in the given directory, if the directory is not passed, it will list the yamls present in the current directory  
-    **Input:** Directory path
-    **Returns:** list of yaml files in the given directory
+    List the yaml files present in the given directory, if the directory is not passed, it will list the yamls present in the current directory   
+    **Input:** Directory path  
+    **Returns:** list of yaml files in the given directory  
 - ##### [get_domain](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L36)
-    Take data product id as input and get the domain to which it is pertaining to
-    **Input:** Data Product ID
-    **Returns:** Domain of the data product
+    Take data product id as input and get the domain to which it is pertaining to.  
+    **Input:** Data Product ID  
+    **Returns:** Domain of the data product  
 - ##### [get_dp_tags](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L45)
     This fetches the tags applied to a table in the form of JSON using the information_schema in the specific catalog
-    **Input:** catalog_name, table_name
-    **Returns:** JSON object containing tags and its values of the mentioned dataproduct
+    **Input:** catalog_name, table_name  
+    **Returns:** JSON object containing tags and its values of the mentioned dataproduct  
 - ##### [get_dp_comment](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L52)
-    This method fetches the comment applied to the dataproduct using the information_schema in the specific catalog
-    **Input:** catalog_name, table_name
-    **Returns:** Returns string which contains the comment applied to the mentioned dataproduct
+    This method fetches the comment applied to the dataproduct using the information_schema in the specific catalog.  
+    **Input:** catalog_name, table_name  
+    **Returns:** Returns string which contains the comment applied to the mentioned dataproduct.  
 - ##### [get_relative_path](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L58)
-    This method fetches the relative path for traversing to the target_path from the source_path
-    **Input:** source_path, target_path
-    **Returns:** Returns relative path to be followed to traverse to the target_path from the source_path
+    This method fetches the relative path for traversing to the target_path from the source_path.  
+    **Input:** source_path, target_path  
+    **Returns:** Returns relative path to be followed to traverse to the target_path from the source_path.  
 
 ### [**DataContractKeyValidator**](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L63)
-This class contains methods for validating keys of the datacontract. A pre-defined method for validating each key in a data contract. Apart from this method, there is a method defined to validate every key in the data contract whether it is null or not.
+This class contains methods for validating keys of the datacontract. A pre-defined method for validating each key in a data contract. Apart from this method, there is a method defined to validate every key in the data contract whether it is null or not.  
 - ##### [validate_key_not_null](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L67)
-    Checks if all the keys in the DataContract are not null
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if any of the key is null
+    Checks if all the keys in the DataContract are not null  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if any of the key is null  
 - ##### [validate_key_description](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L71)
-    Validate the description key value in the datacontract file. Checks if the value in the description key is of string datatype
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the description is not of string datatype
+    Validate the description key value in the datacontract file.  
+    Checks if the value in the description key is of string datatype  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the description is not of string datatype  
 - ##### [validate_key_gaia_dp_id](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L74)
-    Validate the DataProduct ID(gaia_dp_id key) in the datacontract file, if the id is in the format gaiaxxxxx
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the gaia_dp_id is not in valid format
+    Validate the DataProduct ID(gaia_dp_id key) in the datacontract file, if the id is in the format gaiaxxxxx.  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the gaia_dp_id is not in valid format  
 - ##### [validate_key_title](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L78)
-    Validate the title key in the datacontract file. Checks if the value in the title key is of string datatype 
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the title is not of string datatype
+    Validate the title key in the datacontract file. Checks if the value in the title key is of string datatype.  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the title is not of string datatype  
 - ##### [validate_key_product_owner](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L81)
-    Validate the product_owner key in the datacontract file. The value contains multiple emails seperated by comma(','). Checks if each mail mentioned is from the syngenta organization (mail ends with @syngenta.com)
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the product_owner deviates the rules specified
+    Validate the product_owner key in the datacontract file. The value contains multiple emails seperated by comma(','). Checks if each mail mentioned is from the syngenta organization (mail ends with @syngenta.com)  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the product_owner deviates the rules specified  
 - ##### [validate_key_version](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L86)
-    Validate the version key in the datacontract file. Checks if the values is of Semantic versioning [SemVar](https://semver.org/). This method checks if the values is of form MAJOR.MINOR.PATCH or MAJOR.MINOR. (i.e. 0.1, 1.0.0, 1.2.0 etc)
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the version is of SemVar type
+    Validate the version key in the datacontract file. Checks if the values is of Semantic versioning [SemVar](https://semver.org/). This method checks if the values is of form MAJOR.MINOR.PATCH or MAJOR.MINOR. (i.e. 0.1, 1.0.0, 1.2.0 etc)  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the version is of SemVar type  
 - ##### [validate_key_refresh_rate](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L90)
-    Validate the refresh_rate key in the datacontract file. Refresh rate of a dataproduct file must be one of the following 'daily','weekly','monthly','once'.
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the refresh rate key deviates the rules specified.
+    Validate the refresh_rate key in the datacontract file. Refresh rate of a dataproduct file must be one of the following 'daily','weekly','monthly','once'.  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the refresh rate key deviates the rules specified.  
 - ##### [validate_key_apiVersion](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L93)
-    Validate the apiVersion key in the datacontract file. Checks if the values is of Semantic versioning [SemVar](https://semver.org/). This method checks if the values is of form MAJOR.MINOR.PATCH or MAJOR.MINOR. (i.e. 0.1, 1.0.0, 1.2.0 etc)
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the version is of SemVar type
+    Validate the apiVersion key in the datacontract file. Checks if the values is of Semantic versioning [SemVar](https://semver.org/). This method checks if the values is of form MAJOR.MINOR.PATCH or MAJOR.MINOR. (i.e. 0.1, 1.0.0, 1.2.0 etc)  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the version is of SemVar type  
 - ##### [validate_key_kind](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L96)
-    Validate the kind key in the datacontract file. Checks if the value is equal to DataContract.
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the kind is not of DataContract.
+    Validate the kind key in the datacontract file. Checks if the value is equal to DataContract.  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the kind is not of DataContract.  
 - ##### [validate_key_datasetDomain](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L99)
-    Validate the datasetDomain key in the datacontract file. This checks whether the dataproduct is realted to particular domain or not. To fetch the domain of the dataproduct based on the id, and the domain must be one of the following 'portfolio','ppd','productsafetyregulatory','realworld','research'.
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the domain is not valid or domain not related to the dataproduct
+    Validate the datasetDomain key in the datacontract file. This checks whether the dataproduct is realted to particular domain or not. To fetch the domain of the dataproduct based on the id, and the domain must be one of the following 'portfolio','ppd','productsafetyregulatory','realworld','research'.  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the domain is not valid or domain not related to the dataproduct  
 - ##### [validate_key_sourcePlatform](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L104)
-    Validate the sourcePlatform key in the datacontract file. This checks whether the sourcePlatform is 'gaia'.
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the sourcePlatform key deviates the checks.
+    Validate the sourcePlatform key in the datacontract file. This checks whether the sourcePlatform is 'gaia'.  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the sourcePlatform key deviates the checks.  
 - ##### [validate_key_sourceSystem](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L107)
-    Validate the sourceSystem key in the datacontract file. This checks whether the sourceSystem is 'databricks'
-    **Input:** DataContract JSON (dp_datacontract)
-    **Returns:** Raises AssertException if the sourceSystem key deviates the checks.
+    Validate the sourceSystem key in the datacontract file. This checks whether the sourceSystem is 'databricks'  
+    **Input:** DataContract JSON (dp_datacontract)  
+    **Returns:** Raises AssertException if the sourceSystem key deviates the checks.  
 
 ### [**DataContract**](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L115)
-This class contains methods that check if the dataproduct already exists or not, extract the tags and comments of a dataproduct in the form of JSON, fetch the data contract in the form of JSON, fetch the specification YAML in the form of JSON.
+This class contains methods that check if the dataproduct already exists or not, extract the tags and comments of a dataproduct in the form of JSON, fetch the data contract in the form of JSON, fetch the specification YAML in the form of JSON.  
 - ##### [check_if_dp_exists](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L129)
-    Checks if a dataproduct is present in the specified catalog. If the arguments are not passed then method uses class variables
-    **Input:** target_catalog, gaia_dp_id
-    **Returns:** True if exists, otherwise False
+    Checks if a dataproduct is present in the specified catalog. If the arguments are not passed then method uses class variables  
+    **Input:** target_catalog, gaia_dp_id  
+    **Returns:** True if exists, otherwise False  
 - ##### [get_metadata_dict_dp](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L135)
-    Fetches the metadata of a dataproduct inclusing comment. For fetching these values used methods in DataContractUtility.
-    **Input:** target_catalog, gaia_dp_id
-    **Returns:** Returns sorted JSON of the metadata
+    Fetches the metadata of a dataproduct inclusing comment. For fetching these values used methods in DataContractUtility.  
+    **Input:** target_catalog, gaia_dp_id  
+    **Returns:** Returns sorted JSON of the metadata  
 - ##### [get_yaml_rel_path](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L144)
-    Fetches the relative path to datacontract yaml file and specification yaml file from the current working directory.
-    **Input:** yaml_type, gaia_dp_id
-    **Returns:** Returns relative path to the datacontract/ specification yaml based on the yaml_type argument
+    Fetches the relative path to datacontract yaml file and specification yaml file from the current working directory.  
+    **Input:** yaml_type, gaia_dp_id  
+    **Returns:** Returns relative path to the datacontract/ specification yaml based on the yaml_type argument  
 - ##### [get_version](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L156)
-    Fetches the specification version with which datacontract needs to be verified with.
-    **Input:** spec_version
-    **Returns:** Returns the version
+    Fetches the specification version with which datacontract needs to be verified with.  
+    **Input:** spec_version  
+    **Returns:** Returns the version  
 - ##### [get_data_contract](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L167)
-    Checks if DataContract file is present or not. If presents then fetches the data in DataContract.yaml file into python JSON object.
-    **Input:** gaia_dp_id
-    **Returns:** Returns sorted JSON of the datacontract
+    Checks if DataContract file is present or not. If presents then fetches the data in DataContract.yaml file into python JSON object.  
+    **Input:** gaia_dp_id  
+    **Returns:** Returns sorted JSON of the datacontract  
 - ##### [get_specification](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L181)
-    Fetches the specification yaml file and returns the data as JSON
-    **Input:** uses class variables, spec_version
-    **Returns:** Returns sorted JSON of the specification yaml file
+    Fetches the specification yaml file and returns the data as JSON  
+    **Input:** uses class variables, spec_version  
+    **Returns:** Returns sorted JSON of the specification yaml file.  
 - ##### [check_updates](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L192)
-    Compare the metadata of a dataproduct(tags,comment) with datacontract data. If there are updates returns true and specifies taskValue true for key "valid".
-    **Input:** dp_metadata, data_contract
-    **Returns:** True if updates are present otherwise False
+    Compare the metadata of a dataproduct(tags,comment) with datacontract data. If there are updates returns true and specifies taskValue true for key "valid".  
+    **Input:** dp_metadata, data_contract  
+    **Returns:** True if updates are present otherwise False  
 - ##### [validate_data_contract](https://gitlab.com/syngentagroup/cp-rnd/data-platform/gaia/databricks-dataops-data-products/-/blob/GAIA-1449-data-product-v1-0-python-validation-module/src/gaia_data_products/gaia_dc/gaia_dc.py?ref_type=heads#L207)
-    Validate the datacontract with the specification yaml of that specific version. Sets taskValues True if the datacontract is valid, version with which the datacontract is validated against
-    **Input:** data_contract, dp_specification
-    **Returns:** Creates two taskValues Valid, Version based on the validation
+    Validate the datacontract with the specification yaml of that specific version. Sets taskValues True if the datacontract is valid, version with which the datacontract is validated against  
+    **Input:** data_contract, dp_specification  
+    **Returns:** Creates two taskValues Valid, Version based on the validation  
 
 ## dp_metadata
